@@ -1,0 +1,23 @@
+syntax="proto3";
+
+option java_package = "com.cq.esmoking.response";
+option java_outer_classname = "SmokingData";
+
+message SmokingDataMessage{
+  int64 smokingId = 1;
+  int64 userId = 2;
+  int64 smokingDt = 3;
+  int32 hourIndex = 4;
+  int32 dayIndex = 5;
+  int32 monthIndex = 6;
+  int32 yearIndex = 7;
+  int32 numberOfPuffs = 8;
+  double longitude = 9;
+  double latitude = 10;
+  string address = 11;
+  int32 workMode = 12;
+  int32 powerTemp = 13;
+  int32 smokingTime = 14;
+  int32 battery = 15;
+  int32 resistanceValue = 16;
+}

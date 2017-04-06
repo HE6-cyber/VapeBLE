@@ -1,0 +1,15 @@
+syntax="proto3";
+
+option java_package = "com.cq.esmoking.request";
+option java_outer_classname = "CheckUpdateRequest";
+
+message CheckUpdateRequestMessage {
+  string appVersion = 1;
+  
+  enum PhoneType {
+    iPhone = 0;
+    AndroidPhone = 1;
+  }
+  
+  PhoneType phoneType = 2;
+}

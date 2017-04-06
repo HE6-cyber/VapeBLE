@@ -1,0 +1,10 @@
+syntax="proto3";
+
+option java_package = "com.cq.esmoking.request";
+option java_outer_classname = "GetLikeListRequest";
+
+message GetLikeListRequestMessage {
+  string session = 1;
+  int64 blogId = 2;
+  int32 pageIndex = 3;
+}

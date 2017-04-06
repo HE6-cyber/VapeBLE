@@ -1,0 +1,35 @@
+//
+//  ColorHelper.h
+//  Vape
+//
+//  Created by Zhoucy on 2017/3/2.
+//  Copyright © 2017年 YZH. All rights reserved.
+//
+
+//*******************************************************************************************************
+#pragma mark - common
+//*******************************************************************************************************
+//color from HEXCode
+#define HEX_COLOR(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+//color from RGB
+#define RGB_COLOR(redValue, greenValue, blueValue) [UIColor colorWithRed:redValue/255.0 green:greenValue/255.0 blue:blueValue/255.0 alpha:1.0]
+       
+
+
+//======================================================================================================
+#pragma mark -
+//======================================================================================================
+#define kNavigationBar_Bg_Color                     RGB_COLOR(33,45,102)//[UIColor colorWithHexString:@"0x212D66"]   //导航栏背景颜色
+
+#define BORDER_COLOR_BUTTON_DEFAULT                 [UIColor clearColor]        //按钮的边框线默认颜色
+#define KBorder_Line_Default_Color                  RGB_COLOR(220,220,220)      //视图的边框线默认颜色
+
+#define kBackground_Default_Color                   RGB_COLOR(240,240,240)      //默认的背景颜色
+
+#define kBlueBackground_Color                       RGB_COLOR(53,113,222)      //app中蓝色背景颜色
+
+
+
+#define kColorTableSectionBg                        [UIColor colorWithHexString:@"0xeeeeee"]
+
+

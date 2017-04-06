@@ -1,0 +1,12 @@
+syntax="proto3";
+
+import "PhoneType.proto";
+
+option java_package = "com.cq.esmoking.request";
+option java_outer_classname = "LoginRequest";
+
+message LoginRequestMessage {
+  string phone = 1;
+  string password = 2;
+  PhoneType phoneType = 3;
+}

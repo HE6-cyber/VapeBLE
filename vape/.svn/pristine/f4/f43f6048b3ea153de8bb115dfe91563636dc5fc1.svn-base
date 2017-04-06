@@ -1,0 +1,9 @@
+syntax="proto3";
+
+option java_package = "com.cq.esmoking.request";
+option java_outer_classname = "DownloadHeartRateDataRequest";
+
+message DownloadHeartRateDataRequestMessage {
+  string session = 1;
+  int64 time = 2;
+}

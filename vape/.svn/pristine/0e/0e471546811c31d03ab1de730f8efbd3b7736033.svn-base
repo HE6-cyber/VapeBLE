@@ -1,0 +1,12 @@
+syntax="proto3";
+
+import "ErrorMessageResponse.proto";
+
+option java_package = "com.cq.esmoking.response";
+option java_outer_classname = "RegisterResponse";
+
+message RegisterResponseMessage {
+  ErrorMessage errorMsg = 1;
+  string session = 2;
+  int64	userId = 3;
+}

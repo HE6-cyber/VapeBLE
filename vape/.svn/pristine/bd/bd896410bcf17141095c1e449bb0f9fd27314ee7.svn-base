@@ -1,0 +1,16 @@
+//
+//  HomeViewController.h
+//  Vape
+//
+//  Created by Zhoucy on 2017/3/6.
+//  Copyright © 2017年 YZH. All rights reserved.
+//
+
+#import "BaseViewController.h"
+
+@interface HomeViewController : BaseViewController
+
+@property (strong, nonatomic) IBOutlet UIView *progressView;
+
+
+@end

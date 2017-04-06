@@ -1,0 +1,266 @@
+/* 
+  Localizable.strings
+  Vape
+
+  Created by Zhoucy on 2017/3/2.
+  Copyright © 2017年 YZH. All rights reserved.
+*/
+
+
+//====================================================================================
+//通用标签字符串
+//====================================================================================
+"Cancel"    = "Cancel";
+"Confirm"   = "Confirm";
+"Submit"    = "Submit";
+"Finish"    = "Finish";
+"Retry"     = "Retry";
+"Delete"    = "Delete";
+"Settings"  = "Settings";
+
+"UnitSecond"= "s";
+"UnitYear"  = "";
+"UnitPuffs" = "";
+
+"Prompt"    = "Prompt";
+"History"   = "History";
+
+
+//====================================================================================
+//TabBar
+//====================================================================================
+"Home"      = "Home";
+"Data"      = "Data";
+"Discover"  = "Discover";
+"Me"        = "Me";
+
+
+//====================================================================================
+//控制器
+//====================================================================================
+
+/****************Experience*******************/
+"ToTry"         = "To Try";
+"RegisterNow"   = "Register Now";
+
+
+/****************LoginOrRegister*******************/
+"LogIn"             = "Log In";
+"LogOut"            = "Log Out";
+"Register"          = "Register";
+
+"SMSCode"           = "SMS Code";
+"SendSMSCode"       = "Send Code";
+"EnterSMSCode"      = "Enter Code";
+"ForgotPassword"    = "Forgot Password";
+"PhoneNumber"       = "Phone NO";
+"Password"          = "Password";
+
+"Verify"            = "Verify";
+"SetPassword"       = "Set Password";
+
+
+/****************Home*******************/
+"Plan"                      = "Plan";
+"HeartRate"                 = "HR";
+"BloodOxygen"               = "SpO₂";
+"BloodOxygenSaturation"     = "SpO₂";
+"SmokingPuffsToday"         = "Puffs";
+"SmokingTimeToday"          = "Time";
+"HeartRateAndBloodOxygen"   = "HR|SpO₂";
+"StartingTest"              = "Testing";
+"TimesPerSecond"            = "/s";
+
+
+/****************Data*******************/
+"Hour"              = "Hour";
+"Day"               = "Day";
+"Month"             = "Month";
+"Year"              = "Year";
+
+"SmokingPuffs"      = "Puffs";
+"SmokingTime"       = "Time";
+"SmokingAmount"     = "Smoking Amount";
+
+"Few"               = "Few";
+"More"              = "More";
+"Overdose"          = "Overdose";
+
+"SmokingPlace"      = "Smoking Place";
+
+"Today"             = "Today";
+"Yesterday"         = "Yesterday";
+"Tomorrow"          = "Tomorrow";
+
+/****************Discover*******************/
+"Publish"           = "Publish";
+"Reply"             = "Reply";
+"EnterYouWantToSay" = "Enter you want to say...";
+"Post"              = "Post";
+
+"Location"          = "Location";
+"Comments"          = "Comments";
+"Comment"           = "Comment";
+"Like"              = "Like";
+"_PeopleLiked"      = "%ld people liked";
+
+"Sorry"             = "Sorry";
+
+/****************Me*******************/
+"PersonalInformation"   = "Personal Information";
+"AccountSettings"       = "Account Settings";
+"DeviceSettings"        = "Device Settings";
+"SystemSettings"        = "System Settings";
+"Shop"                  = "Shop";
+
+"AddDevice"             = "Add Device";
+"Disconnected"          = "Disconnected";
+"Connected"             = "Connected";
+
+"DeviceName"            = "Device Name";
+"ModeAndParameter"     = "Mode and Parameter";
+"Unbind"                = "Unbind";
+
+"SearchingDevice"           = "Searching Device";
+"LetDeviceClosedToThePhone" = "Let device closed to the phone";
+"NotAdd"                    = "Not Add";
+"Add"                       = "Add";
+
+"WorkMode"              = "Mode";
+"Parameter"             = "Parameter";
+"PowerMode"             = "Power Mode";
+"TemperatureModeC"      = "Temperature Mode(°C)";
+"TemperatureModeF"      = "Temperature Mode(°F)";
+
+"PasswordEdit"          = "Password Edit";
+"CurrentPassword"       = "Current";
+"NewPassword"           = "New";
+"ConfirmNewPassword"    = "Retype";
+
+"SystemLanguage"        = "System Language";
+"SoftwareVersion"       = "Software Version";
+"Chinese"               = "简体中文";
+"English"               = "English";
+
+
+/****************个人信息*******************/
+"ProfilePicture"        = "Profile Picture";
+"Nickname"              = "Nickname";
+"Gender"                = "Gender";
+"Age"                   = "Age";
+"Height"                = "Height";
+"Weight"                = "Weight";
+"YearOfSmoking"         = "Years of Smoking";
+"Privacy"               = "Privacy";
+"Male"                  = "Male";
+"Female"                = "Female";
+
+"UpdateProfilePicture"  = "Update Profile Picture";
+"Photograph"            = "Photograph";
+"UploadFromAlbum"       = "Upload From Album";
+
+"PlanSettings"              = "Plan Settings";
+"TheHomepage"               = "Display Items";
+"SmokingPlan"               = "Smoking Plan";
+"SmokingPuffsPlanForToday"  = "Puff Plan for Today";
+"SmokingTimePlanForToday"   = "Time Plan for Today";
+
+"SmokingPuffsUnit"          = "";//英文版省略单位
+"SmokingTimeUnit"           = "min";
+
+"PleaseEnterUserNickname" = "Please Enter User Nickname";
+
+
+//====================================================================================
+// 提示消息文本
+//====================================================================================
+"PleaseLogin"               = "Please login.";
+"TryAgain"                  = "Failed, try again.";
+
+"BluetoothNotEnabled"       = "Bluetooth not enabled.";
+"DeviceConnected"           = "Device connected.";
+"DeviceDisconnected"        = "Device disconnected.";
+"NoBindedDeviceToReconnect" = "No binded device to reconnect.";
+"ReconnectionTimeout"       = "Reconnection timeout.";
+
+"GetVerificationCodeSuccessful"         = "Get verification code successful.";
+"GetVerificationCodeFailed"             = "Get verification code failed.";
+"PleaseEnterTheCorrectVerificationCode" = "Please enter the correct verification code.";
+"LoginSuccessful"                       = "Login successful.";
+"LoginFailed"                           = "Login failed.";
+"RegistrationSuccessful"                = "Registration successful.";
+"RegistrationFailed"                    = "Registration failed.";
+
+"ResetPasswordSuccessfully"             = "Reset password successfully.";
+"ResetPasswordFailed"                   = "Reset password failed.";
+"PasswordChanged"                       = "Password changed.";
+"PasswordChangeFailed"                  = "Password change failed.";
+
+"NotFoundTheDevicePleaseEnsureTheDeviceScreenBrightAndCloseItToThePhone" = "Not found the device, please ensure the device screen bright and close it to the phone.";
+"ConnectionTimeout"                     = "Connection timeout.";
+"InitializationFailed"                  = "Initialization failed.";
+
+"PleaseAddDevice"                       = "Please add device.";
+"DeviceNameCannotBeEmpty"               = "Device name cannot be empty.";
+"DeviceSetupSuccessful"                 = "Setup successful.";
+"DeviceSetupFailed"                     = "Setup failed.";
+
+"PersonalInformationUpdated"            = "Information updated.";
+"PersonalInformationUpdateFailed"       = "Information update failed.";
+
+"SmokingPlanSetUpSuccessful"            = "Smoking Plan set up successful.";
+"SmokingPlanSetUpFailed"                = "Smoking Plan set up failed.";
+
+"SynchronousDataSuccessfully"    = "Synchronous data successfully.";
+"SynchronousDataFailed"          = "Synchronous data failed.";
+
+"NoSmokingAddressData"                  = "No smoking address data.";
+
+"HeartRateAndBloodOxygenDetectionFailedPleaseCheckIfTheDeviceConnectedProperly" = "Heart rate and blood oxygen detection failed, please check if the device connected properly.";
+
+"NoNetworkPleaseCheckTheNetworkSettings" = "No network, please check the network Settings.";
+
+"NotConnectedToTheDevicePleaseConnectTheDeviceAndThenTryAgain" = "Not connected to the device, please connect the device and then try again.";
+
+"AreYouSureYouWantToDeleteIt" = "Are you sure you want to delete it?";
+
+"LoadFailure" = "Load failure.";
+
+"PleaseOpenTheLocationServiceToAllowAPPToAccessYourLocationInformation" = "Please open the “location service” to allow APP to access your location information.";
+
+"DoYouWantToExitTheEditor"      = "Do you want to exit the editor?";
+"PleaseUploadAtLeastOnePicture" = "Please upload at least one picture.";
+"FailedToObtainUserLocation"    = "Failed to obtain user location.";
+"PostFailure"                   = "Post failure.";
+"DeletePostFailed"              = "Delete post failed.";
+"DeleteCommentFailed"           = "Delete comment failed";
+"LikeFailure"                   = "Like failure.";
+"NoData"                        = "No Data";
+
+"CanNotJumpToThePrivacySettingsPagePleaseGoToTheSettingsPageManually" = "Can not jump to the privacy settings page, please go to the settings page manually.";
+"UnableToAccessAlbum" = "Unable to access album";
+"UnableToUseCamera" = "Unable to use camera";
+"PleaseAllowAccessToAlbumsIniPhoneSettingsPrivacyPhotos" = "Please allow access to albums in iPhone's “Settings - Privacy - Photos”.";
+"PleaseAllowAccessToTheCameraInTheiPhoneSettingsPrivacyCamera" = "Please allow access to the camera in the iPhone's ”Settings - Privacy - Camera“.";
+
+"DoYouWantToEnterTheMall" = "Do you want to enter the mall?";
+
+"ShareSuccess" = "Share success";
+"ShareFailure" = "Share failure";
+
+"TheDeviceDoesNotSupportTakingPictures" = "The device does not support taking pictures";
+
+
+"MallSiteIsUnderConstructionPleaseLookForwardToIt" = "Mall site is under construction, please look forward to it.";
+
+
+//====================================================================================
+// 通用消息文本
+//====================================================================================
+"FormatOf_NotCorrect"   = "Format of %@ not correct.";
+"LengthOf_MustBe_To_"   = "Length of %@ must be %ld to %ld.";
+"_And_Inconsistent"     = "%@ and %@ inconsistent.";
+"_CanNotBeBlank"        = "%@ can't be blank.";
+
+
+

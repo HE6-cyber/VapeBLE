@@ -1,0 +1,262 @@
+/* 
+  Localizable.strings
+  Vape
+
+  Created by Zhoucy on 2017/3/2.
+  Copyright © 2017年 YZH. All rights reserved.
+*/
+
+
+//====================================================================================
+//通用标签字符串
+//====================================================================================
+"Cancel"    = "取消";
+"Confirm"   = "确定";
+"Submit"    = "确认提交";
+"Finish"    = "完成";
+"Retry"     = "重试";
+"Delete"    = "删除";
+"Settings"  = "设置";
+
+"UnitSecond"= "秒";
+"UnitYear"  = "年";
+"UnitPuffs" = "口";
+
+"Prompt"    = "提示";
+"History"   = "历史";
+
+
+//====================================================================================
+//TabBar
+//====================================================================================
+"Home"      = "首页";
+"Data"      = "数据";
+"Discover"  = "发现";
+"Me"        = "我";
+
+
+//====================================================================================
+//控制器
+//====================================================================================
+
+/****************Experience*******************/
+"ToTry"             = "先体验一下";
+"RegisterNow"       = "马上注册";
+
+/****************LoginOrRegister*******************/
+"LogIn"             = "登录";
+"LogOut"            = "退出账号";
+"Register"          = "注册";
+
+"SMSCode"           = "验证码";
+"SendSMSCode"       = "发送验证码";
+"EnterSMSCode"      = "输入验证码";
+"ForgotPassword"    = "忘记密码";
+"PhoneNumber"       = "手机号码";
+"Password"          = "密码";
+
+"Verify"            = "验证";
+"SetPassword"       = "设置密码";
+
+
+/****************Home*******************/
+"Plan"                      = "计划";
+"HeartRate"                 = "心率";
+"BloodOxygen"               = "血氧";
+"BloodOxygenSaturation"     = "血氧饱和度";
+"SmokingPuffsToday"         = "今日吸烟口数";
+"SmokingTimeToday"          = "今日吸烟时间";
+"HeartRateAndBloodOxygen"   = "心率血氧";
+"StartingTest"              = "开始检测";
+"TimesPerSecond"            = "次/秒";
+
+
+/****************Data*******************/
+"Hour"              = "时";
+"Day"               = "日";
+"Month"             = "月";
+"Year"              = "年";
+
+"SmokingPuffs"      = "吸烟口数";
+"SmokingTime"       = "吸烟时间";
+"SmokingAmount"     = "吸烟情况";
+
+"Few"               = "少量";
+"More"              = "较多";
+"Overdose"          = "过量";
+
+"SmokingPlace"      = "吸烟地址";
+
+"Today"             = "今天";
+"Yesterday"         = "昨天";
+"Tomorrow"          = "明天";
+
+/****************Discover*******************/
+"Publish"           = "发布";
+"Reply"             = "回复";
+"EnterYouWantToSay" = "输入你想说的...";
+"Post"              = "帖子";
+
+"Location"          = "所在位置";
+"Comments"          = "详情";
+"Comment"           = "写评论";
+"Like"              = "赞";
+"_PeopleLiked"      = "%ld人点赞了";
+
+"Sorry"             = "抱歉";
+
+/****************Me*******************/
+"PersonalInformation"   = "个人信息";
+"AccountSettings"       = "账号设置";
+"DeviceSettings"        = "烟具设置";
+"SystemSettings"        = "系统设置";
+"Shop"                  = "进入商城";
+
+"AddDevice"             = "添加烟具";
+"Disconnected"          = "未连接";
+"Connected"             = "已连接";
+
+"DeviceName"            = "烟具名称";
+"ModeAndParameter"     = "模式及参数";
+"Unbind"                = "解除绑定";
+
+"SearchingDevice"           = "正在搜索烟具";
+"LetDeviceClosedToThePhone" = "请将烟具贴近手机";
+"NotAdd"                    = "暂不添加";
+"Add"                       = "添加";
+
+"WorkMode"              = "工作模式";
+"Parameter"             = "参数";
+"PowerMode"             = "功率模式";
+"TemperatureModeC"      = "温度模式(°C)";
+"TemperatureModeF"      = "温度模式(°F)";
+
+"PasswordEdit"          = "修改密码";
+"CurrentPassword"       = "当前密码";
+"NewPassword"           = "新密码";
+"ConfirmNewPassword"    = "确认新密码";
+
+"SystemLanguage"        = "系统语言";
+"SoftwareVersion"       = "软件版本";
+"Chinese"               = "简体中文";
+"English"               = "English";
+
+/****************个人信息*******************/
+"ProfilePicture"        = "头像";
+"Nickname"              = "昵称";
+"Gender"                = "性别";
+"Age"                   = "年龄";
+"Height"                = "身高";
+"Weight"                = "体重";
+"YearOfSmoking"         = "烟龄";
+"Privacy"               = "保密";
+"Male"                  = "男";
+"Female"                = "女";
+
+"UpdateProfilePicture"  = "更换头像";
+"Photograph"            = "拍照";
+"UploadFromAlbum"       = "从相册选择";
+
+"PlanSettings"              = "计划制定";
+"TheHomepage"               = "首页显示";
+"SmokingPlan"               = "吸烟计划";
+"SmokingPuffsPlanForToday"  = "今日计划吸烟口数";
+"SmokingTimePlanForToday"   = "今日计划吸烟时长";
+
+"SmokingPuffsUnit"      = "口";//英文版省略单位
+"SmokingTimeUnit"       = "分钟";
+
+"PleaseEnterUserNickname" = "请输入用户昵称";
+
+//====================================================================================
+// 提示消息文本
+//====================================================================================
+"PleaseLogin"               = "请登录";
+"TryAgain"                  = "操作失败，请重试.";
+
+"BluetoothNotEnabled"       = "蓝牙功能未启用.";
+"DeviceConnected"           = "烟具连接成功.";
+"DeviceDisconnected"        = "烟具连接已断开.";
+"NoBindedDeviceToReconnect" = "重连找不到已绑定的烟具.";
+"ReconnectionTimeout"       = "烟具重连超时.";
+
+"GetVerificationCodeSuccessful"         = "获取验证码成功.";
+"GetVerificationCodeFailed"             = "获取验证码失败.";
+"PleaseEnterTheCorrectVerificationCode" = "请输入正确的验证码.";
+"LoginSuccessful"                       = "用户登录成功.";
+"LoginFailed"                           = "用户登录失败.";
+"RegistrationSuccessful"                = "用户注册成功.";
+"RegistrationFailed"                    = "用户注册失败.";
+
+"ResetPasswordSuccessfully" = "重设密码成功.";
+"ResetPasswordFailed"       = "重设密码失败.";
+"PasswordChanged"           = "密码修改成功.";
+"PasswordChangeFailed"      = "密码修改失败.";
+
+"NotFoundTheDevicePleaseEnsureTheDeviceScreenBrightAndCloseItToThePhone" = "未发现烟具，请确保烟具亮屏且贴近手机.";
+"ConnectionTimeout"         = "烟具连接超时.";
+"InitializationFailed"      = "烟具初始化失败.";
+
+"PleaseAddDevice"           = "请先添加烟具.";
+"DeviceNameCannotBeEmpty"   = "烟具名称不能为空.";
+"DeviceSetupSuccessful"     = "烟具设置成功.";
+"DeviceSetupFailed"         = "烟具设置失败.";
+
+"PersonalInformationUpdated"        = "用户信息更新成功.";
+"PersonalInformationUpdateFailed"   = "用户信息更新失败.";
+
+"SmokingPlanSetUpSuccessful"        = "吸烟计划设置成功.";
+"SmokingPlanSetUpFailed"            = "吸烟计划设置失败.";
+
+"SynchronousDataSuccessfully"    = "同步吸烟数据成功.";
+"SynchronousDataFailed"          = "同步吸烟数据失败.";
+
+"NoSmokingAddressData" = "无吸烟地址数据.";
+
+"HeartRateAndBloodOxygenDetectionFailedPleaseCheckIfTheDeviceConnectedProperly" = "心率血氧检测失败，请检测设备连接是否正常.";
+
+"NoNetworkPleaseCheckTheNetworkSettings" = "没有网络，请检测您的网络设置.";
+
+"NotConnectedToTheDevicePleaseConnectTheDeviceAndThenTryAgain" = "未连接设备,请您先连接设备再重试.";
+
+"AreYouSureYouWantToDeleteIt" = "您确定要删除吗?";
+
+"LoadFailure" = "加载失败.";
+
+"PleaseOpenTheLocationServiceToAllowAPPToAccessYourLocationInformation" = "请打开”定位服务“来允许APP访问您的位置信息.";
+
+"DoYouWantToExitTheEditor"      = "要退出本次编辑吗?";
+"PleaseUploadAtLeastOnePicture" = "请至少上传一张图片.";
+"FailedToObtainUserLocation"    = "获取用户位置失败.";
+"PostFailure"                   = "发帖失败.";
+"DeletePostFailed"              = "删帖失败.";
+"DeleteCommentFailed"           = "删除回复失败";
+"LikeFailure"                   = "点赞失败";
+"NoData"                        = "没有数据";
+
+"CanNotJumpToThePrivacySettingsPagePleaseGoToTheSettingsPageManually" = "无法跳转到隐私设置页面，请手动前往设置页面.";
+"UnableToAccessAlbum" = "无法访问相册";
+"UnableToUseCamera" = "无法使用相机";
+"PleaseAllowAccessToAlbumsIniPhoneSettingsPrivacyPhotos" = "请在iPhone的“设置-隐私-照片”中允许访问相册.";
+"PleaseAllowAccessToTheCameraInTheiPhoneSettingsPrivacyCamera" = "请在iPhone的“设置-隐私-相机”中允许访问相机.";
+
+"DoYouWantToEnterTheMall" = "要进入商城吗？";
+
+"ShareSuccess" = "分享成功";
+"ShareFailure" = "分享失败";
+
+"TheDeviceDoesNotSupportTakingPictures" = "该设备不支持拍照";
+
+"MallSiteIsUnderConstructionPleaseLookForwardToIt" = "商城网站建设中,敬请期待...";
+
+
+//====================================================================================
+// 通用消息文本
+//====================================================================================
+"FormatOf_NotCorrect"   = "%@格式不正确.";
+"LengthOf_MustBe_To_"   = "%@的长度必须是%ld-%ld位.";
+"_And_Inconsistent"     = "%@与%@不一致.";
+"_CanNotBeBlank"        = "%@不能为空.";
+
+
+

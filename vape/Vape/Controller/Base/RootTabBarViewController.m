@@ -1,0 +1,118 @@
+//
+//  RootTabBarController.m
+//  Vape
+//
+//  Created by WestWood on 2017/3/13.
+//  Copyright © 2017年 YZH. All rights reserved.
+//
+
+#import "RootTabBarViewController.h"
+#import "BaseNavigationController.h"
+#import "RDVTabBarItem.h"
+#import "HomeViewController.h"
+#import "DataViewController.h"
+#import "DiscoveryViewController.h"
+#import "MeViewController.h"
+
+
+
+@interface RootTabBarViewController () <RDVTabBarControllerDelegate>
+
+@end
+
+@implementation RootTabBarViewController
+
+//================================================================================================================
+#pragma mark - 控制器生命周期方法
+//================================================================================================================
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self setupViewControllers];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
+
+//================================================================================================================
+#pragma mark - 配置RootTabViewController的子控制器与TabBar
+//================================================================================================================
+/**
+ * 在搭建tabBar的过程中我们先设置tabbar每个按钮上的控制器,再控制每个控制器的根视图控制器为导航控制器
+ **/
+- (void)setupViewControllers {
+    HomeViewController *homeVC = VIEW_CONTROLLER_IN_STORYBOARD(kStoryboard_Name_Home, @"HomeViewController");;
+    BaseNavigationController *vapeNav_homeVC = [[BaseNavigationController alloc] initWithRootViewController:homeVC];
+    
+    DataViewController *dataVC = VIEW_CONTROLLER_IN_STORYBOARD(kStoryboard_Name_Data, @"DataViewController");
+    BaseNavigationController *vapeNav_dataVC = [[BaseNavigationController alloc] initWithRootViewController:dataVC];
+    
+    DiscoveryViewController *discVC = VIEW_CONTROLLER_IN_STORYBOARD(kStoryboard_Name_Discovery, @"DiscoveryViewController");
+    BaseNavigationController *vapeNav_discVC = [[BaseNavigationController alloc] initWithRootViewController:discVC];
+
+    MeViewController *meVC = VIEW_CONTROLLER_IN_STORYBOARD(kStoryboard_Name_Me, @"MeViewController");
+    BaseNavigationController *vapeNav_meVC = [[BaseNavigationController alloc] initWithRootViewController:meVC];
+
+    
+    [self setViewControllers:@[vapeNav_homeVC,vapeNav_dataVC,vapeNav_discVC,vapeNav_meVC]];
+    
+    [self customizeTabBarForController];
+    self.delegate = self;
+}
+
+
+/**
+ * 设置TabBar
+ */
+- (void)customizeTabBarForController {
+    
+    UIImage *backgroundImage = [UIImage imageNamed:@"tabbar_background"];
+    NSArray *tabBarItemImages = @[@"home", @"data", @"discovery", @"me"];
+    NSArray *tabBarItemTitles = @[LOCALIZED_STRING(keyHome), LOCALIZED_STRING(keyData), LOCALIZED_STRING(keyDiscover), LOCALIZED_STRING(keyMe)];
+    
+    NSInteger index = 0;
+    for (RDVTabBarItem *item in [[self tabBar] items]) {
+        item.titlePositionAdjustment = UIOffsetMake(0, 3);
+        [item setBackgroundSelectedImage:backgroundImage withUnselectedImage:backgroundImage];
+        UIImage *selectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_selected",
+                                                      [tabBarItemImages objectAtIndex:index]]];
+        UIImage *unselectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_normal",
+                                                        [tabBarItemImages objectAtIndex:index]]];
+        [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
+        [item setTitle:[tabBarItemTitles objectAtIndex:index]];
+        
+        NSDictionary *unselectedTitleAttributes = @{ NSFontAttributeName: [UIFont systemFontOfSize:10],
+                                                     NSForegroundColorAttributeName: [UIColor colorWithHexString:@"0x707070"]};
+        NSDictionary *selectedTitleAttributes = @{ NSFontAttributeName: [UIFont systemFontOfSize:10],
+                                                   NSForegroundColorAttributeName: [UIColor colorWithHexString:@"0x55aa35"]};
+        [item setUnselectedTitleAttributes:unselectedTitleAttributes];
+        [item setSelectedTitleAttributes:selectedTitleAttributes];
+        index++;
+    }
+    
+}
+
+
+//================================================================================================================
+#pragma mark - RDVTabBarControllerDelegate
+//================================================================================================================
+/**
+ * Asks the delegate whether the specified view controller should be made active.
+ */
+- (BOOL)tabBarController:(RDVTabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
+    return YES;
+}
+
+- (BOOL)tabBar:(RDVTabBar *)tabBar shouldSelectItemAtIndex:(NSInteger)index {
+//    if (index == 2 && ![UserHelper isLogin]) { //发现功能必须登录后才能使用
+//        [TSMessage showNotificationWithTitle:LOCALIZED_STRING(keyPleaseLogin) type:TSMessageNotificationTypeError];
+//        return NO;
+//    }
+    return [super tabBar:tabBar shouldSelectItemAtIndex:index];
+}
+
+
+
+
+@end

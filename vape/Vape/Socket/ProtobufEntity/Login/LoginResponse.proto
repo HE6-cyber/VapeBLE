@@ -1,0 +1,24 @@
+syntax="proto3";
+
+import "ErrorMessageResponse.proto";
+
+option java_package = "com.cq.esmoking.response";
+option java_outer_classname = "LoginResponse";
+
+message LoginResponseMessage {
+  ErrorMessage errorMsg = 1;
+  string session = 2;
+  int64	userId = 3;
+  string phone = 4;
+  string userName = 5;
+  string userPhoto = 6;
+  int32 userGender = 7;
+  int32 userAge = 8;
+  int32 smokeAge = 9;
+  double userHeight = 10;
+  double userWeight = 11;
+  int32 planCount = 12;
+  int32 planTime = 13;
+  int32 homeInfo = 14;
+  int32 language = 15;
+}

@@ -1,0 +1,9 @@
+syntax="proto3";
+
+option java_package = "com.cq.esmoking.response";
+option java_outer_classname = "ErrorMessageResponse";
+
+message ErrorMessage {
+  int32 errorCode = 1;
+  string errorMsg = 2;
+}

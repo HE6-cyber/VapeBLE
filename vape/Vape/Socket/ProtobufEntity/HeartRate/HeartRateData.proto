@@ -1,0 +1,12 @@
+syntax="proto3";
+
+option java_package = "com.cq.esmoking.response";
+option java_outer_classname = "HeartRateData";
+
+message HeartRateDataMessage{
+  int64 heartRateId = 1;
+  int64 userId = 2;
+  int64 heartRateDt = 3;
+  int32 heartRate = 4;
+  int32 bloodOxygen = 5;
+}

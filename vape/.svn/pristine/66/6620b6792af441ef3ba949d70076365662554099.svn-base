@@ -1,0 +1,26 @@
+syntax="proto3";
+
+option java_package = "com.cq.esmoking.request";
+option java_outer_classname = "UpdateProfileRequest";
+
+message UpdateProfileRequestMessage {
+  string session = 1;
+  
+  enum SettingField {
+    user_photo = 0;
+    user_name = 1;
+	user_gender = 2;
+	user_age = 3;
+	smoke_age = 4;
+	user_height = 5;
+	user_weight = 6;
+	home_info = 7;
+	plan_count = 8;
+  	plan_time = 9;
+  	language = 10;
+  }
+  
+  SettingField settingField = 2;
+  
+  string settingValue = 3;
+}

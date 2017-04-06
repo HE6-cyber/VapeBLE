@@ -1,0 +1,161 @@
+//
+//  HomeViewController.m
+//  Vape
+//
+//  Created by Zhoucy on 2017/3/6.
+//  Copyright © 2017年 YZH. All rights reserved.
+//
+
+#import "HomeViewController.h"
+#import "BLEBindDeviceCommand.h"
+#import "BLEDataDecodingHelper.h"
+#import "BLEFrame.h"
+#import "BLECommandHelper.h"
+#import "ProgressView.h"
+#import "Masonry.h"
+
+
+@interface HomeViewController ()
+
+@property (strong, nonatomic) BLECommandHelper *bleCommandHelper;
+@property (strong, nonatomic) NSMutableArray   *deviceArray;
+@property (strong, nonatomic) ProgressView     *progress;
+
+@end
+
+@implementation HomeViewController
+
+//=====================================================================
+#pragma mark - viewcontroller lifecycle
+//=====================================================================
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    [self initialParameter];
+    BLEBindDeviceCommand *bindDeviceCommand = [[BLEBindDeviceCommand alloc] initBLEBindDeviceCommandWithMacAddress:@[@(0xAA), @(0xBB), @(0xCC),@(0xDD),@(0xEE),@(0xFF)]];
+    NSData *commandData = [bindDeviceCommand getCommandData];
+    DebugLog(@"%@", commandData);
+    BLEFrame *frame =  [BLEDataDecodingHelper decodeReceivedData:commandData macAddress:@[@(0xAA), @(0xBB), @(0xCC),@(0xDD),@(0xEE),@(0xFF)]];
+    [self configureProgressView];
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self confiureBasicComponent];
+    [[self.navigationController navigationBar]  setHidden:YES];
+}
+
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self configureBackGroundColor];
+}
+
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [[self.navigationController navigationBar]  setHidden:NO];
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+    self.bleCommandHelper = [BLECommandHelper shareBLECommandHelper];
+    [self.bleCommandHelper scan];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(discoverPeripheral:) name:BLECommandHelperNotification object:nil];
+}
+
+
+//============================================================
+#pragma mark - Button click
+//============================================================
+- (IBAction)shareButtonClicked:(id)sender {
+    
+    
+    
+}
+
+
+
+
+
+//============================================================
+#pragma mark - Private method
+//============================================================
+- (void)discoverPeripheral:(NSNotification *)notifiction {
+    BLEMessage *message = notifiction.userInfo[kUserInfo_Key_Message];
+    BLENotificationCode notifictionCode = [message notificationCode];
+    switch (notifictionCode) {
+        case BLENotificationCodeDiscoverPeripheral:
+            //存储设备的UUID，便于重新连接蓝牙设备
+            
+            
+            //展示设备,用什么进行展示？？？
+            
+            
+            
+            break;
+            
+        default:
+            break;
+    }
+}
+
+//将声明的变量初始化
+- (void)initialParameter {
+    self.deviceArray = [NSMutableArray array];
+}
+
+- (void)configureProgressView {
+    
+    self.progress = [[ProgressView alloc] initWithFrame:CGRectZero];
+    [self.progressView addSubview:self.progress];
+    [self.progress mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(self.progressView.mas_width);
+        make.height.mas_equalTo(self.progressView.mas_height);
+        make.centerX.equalTo(self.progressView.mas_centerX).offset(0);
+        make.centerY.equalTo(self.progressView.mas_centerY).offset(0);
+    }];
+    
+    [self.progress setPlanCount:@"600"];
+    [self.progress setInFactcount:@"600"];
+    [self.progressView addSubview:self.progress];
+}
+
+//配置渐变色
+- (void)configureBackGroundColor {
+    
+    CAGradientLayer *gradualLayer = [CAGradientLayer layer];
+    [self.backGroundColorView.layer addSublayer:gradualLayer];
+    [gradualLayer setFrame:CGRectMake(0, 0, self.view.size.width, self.backGroundColorView.bounds.size.height)];
+    
+    //设置渐变色的起始位置
+    [gradualLayer setStartPoint:CGPointMake(0, 1)];
+    [gradualLayer   setEndPoint:CGPointMake(1, 0)];
+    
+    //设置颜色数组
+    [gradualLayer setColors:@[(__bridge id)[UIColor colorWithRed:53.f/255 green:215.f/255  blue:255.f/255 alpha:1].CGColor,
+                              (__bridge id)[UIColor colorWithRed:38.f/255 green:120.f/255  blue:230.f/255 alpha:1].CGColor]];
+    
+    gradualLayer.locations = @[@(0.23f),@(0.7f),@(0.9f)];
+}
+
+- (void)confiureBasicComponent {
+    //设置心率测试按钮
+    [self.heartRateTestButton setBorderWidth:1.0];
+    [[self.heartRateTestButton layer] setCornerRadius:20];
+    [self.heartRateTestButton setBorderColor:[UIColor whiteColor]];
+    
+    //设置工作模式 温度为红色字体
+    NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:[self.workModelLabel text]];
+    NSRange range = NSMakeRange(4, 4);
+    [string addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:range];
+    [self.workModelLabel setAttributedText:string];
+}
+
+
+@end

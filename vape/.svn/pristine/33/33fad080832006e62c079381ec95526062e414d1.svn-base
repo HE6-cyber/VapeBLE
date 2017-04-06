@@ -1,0 +1,104 @@
+//
+//  HomeViewController.m
+//  Vape
+//
+//  Created by Zhoucy on 2017/3/6.
+//  Copyright © 2017年 YZH. All rights reserved.
+//
+
+#import "HomeViewController.h"
+#import "BLEBindDeviceCommand.h"
+#import "BLEDataDecodingHelper.h"
+#import "BLEFrame.h"
+#import "BLECommandHelper.h"
+#import "ProgressView.h"
+#import "Masonry.h"
+
+
+@interface HomeViewController ()
+
+@property (strong, nonatomic) BLECommandHelper *bleCommandHelper;
+@property (strong, nonatomic) NSMutableArray   *deviceArray;
+@property (strong, nonatomic) ProgressView *progress;
+
+@end
+
+@implementation HomeViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    [self initialParameter];
+    BLEBindDeviceCommand *bindDeviceCommand = [[BLEBindDeviceCommand alloc] initBLEBindDeviceCommandWithMacAddress:@[@(0xAA), @(0xBB), @(0xCC),@(0xDD),@(0xEE),@(0xFF)]];
+    NSData *commandData = [bindDeviceCommand getCommandData];
+    DebugLog(@"%@", commandData);
+    BLEFrame *frame =  [BLEDataDecodingHelper decodeReceivedData:commandData macAddress:@[@(0xAA), @(0xBB), @(0xCC),@(0xDD),@(0xEE),@(0xFF)]];
+    
+    [self configureProgressView];
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+}
+
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+    self.bleCommandHelper = [BLECommandHelper shareBLECommandHelper];
+    [self.bleCommandHelper scan];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(discoverPeripheral:) name:BLECommandHelperNotification object:nil];
+}
+
+
+
+
+//==========================================================================
+#pragma mark - Private method
+//==========================================================================
+- (void)discoverPeripheral:(NSNotification *)notifiction {
+    BLEMessage *message = notifiction.userInfo[kUserInfo_Key_Message];
+    BLENotificationCode notifictionCode = [message notificationCode];
+    switch (notifictionCode) {
+        case BLENotificationCodeDiscoverPeripheral:
+            //存储设备的UUID，便于重新连接蓝牙设备
+            
+            
+            //展示设备,用什么进行展示？？？
+            
+            
+            
+            break;
+            
+        default:
+            break;
+    }
+}
+
+//将声明的变量初始化
+- (void)initialParameter {
+    self.deviceArray = [NSMutableArray array];
+}
+
+- (void)configureProgressView {
+    
+    self.progress = [[ProgressView alloc] initWithFrame:CGRectZero];
+    [self.progressView addSubview:self.progress];
+    
+    
+    
+    self.progress.haveFinished = 0.00;
+    self.progress.haveFinished = 0.00;
+    [self.progressView addSubview:self.progress];
+    [self.progressView setBackgroundColor:[UIColor blueColor]];
+    [self.progress     setBackgroundColor:[UIColor redColor]];
+}
+
+
+
+
+@end

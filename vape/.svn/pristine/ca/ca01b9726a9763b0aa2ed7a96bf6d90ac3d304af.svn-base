@@ -1,0 +1,28 @@
+syntax="proto3";
+
+import "ErrorMessageResponse.proto";
+
+option java_package = "com.cq.esmoking.response";
+option java_outer_classname = "GetBlogListResponse";
+
+message GetBlogListResponseMessage {
+  ErrorMessage errorMsg = 1;
+  bool isLastPage = 2;
+  repeated BlogMessage blogs = 3;
+}
+
+message BlogMessage{
+  int64 blogId = 1;
+  string content = 2;
+  double longitude = 3;
+  double latitude = 4;
+  string address = 5;
+  int32 likeCount = 6;
+  int32 commentCount = 7;
+  int64 userId = 8;
+  bool isLike = 9;
+  string author = 10;
+  string authorPhoto = 11;
+  int64 createDt = 12;
+  repeated string images = 13;
+}

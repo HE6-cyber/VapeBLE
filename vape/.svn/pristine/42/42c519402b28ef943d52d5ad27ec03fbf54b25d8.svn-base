@@ -1,0 +1,9 @@
+syntax="proto3";
+
+option java_package = "com.cq.esmoking.response";
+option java_outer_classname = "UploadFailData";
+
+message UploadFailDataMessage{
+  int64 failId = 1;
+  int32 code = 2;
+}

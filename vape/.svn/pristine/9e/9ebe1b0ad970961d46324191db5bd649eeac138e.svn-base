@@ -1,0 +1,13 @@
+syntax="proto3";
+
+import "ErrorMessageResponse.proto";
+
+option java_package = "com.cq.esmoking.response";
+option java_outer_classname = "CheckUpdateResponse";
+
+message CheckUpdateResponseMessage {
+  ErrorMessage errorMsg = 1;
+  string version = 2;
+  int64	updateTime = 3;
+  string updateLog = 4;
+}

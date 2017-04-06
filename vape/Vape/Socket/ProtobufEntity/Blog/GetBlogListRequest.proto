@@ -1,0 +1,9 @@
+syntax="proto3";
+
+option java_package = "com.cq.esmoking.request";
+option java_outer_classname = "GetBlogListRequest";
+
+message GetBlogListRequestMessage {
+  string session = 1;
+  int32 pageIndex = 2;
+}

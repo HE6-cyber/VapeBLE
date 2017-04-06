@@ -1,0 +1,12 @@
+syntax="proto3";
+
+import "ErrorMessageResponse.proto";
+import "SmokingLocationData.proto";
+
+option java_package = "com.cq.esmoking.response";
+option java_outer_classname = "DownloadSmokingLocationDataResponse";
+
+message DownloadSmokingLocationDataResponseMessage {
+  ErrorMessage errorMsg = 1;
+  repeated SmokingLocationDataMessage smokingDatas = 2;
+}
